@@ -94,3 +94,9 @@ body {
 .dot-3 {
   animation-delay: 0.4s;
 }
+
+@media (pointer: fine) {
+  html, body, * {
+    cursor: auto !important;
+  }
+}
