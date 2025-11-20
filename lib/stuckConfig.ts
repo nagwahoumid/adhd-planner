@@ -74,7 +74,7 @@ export const STUCK_TOPICS: StuckTopicConfig[] = [
   },
   {
     key: 'second-guessing-indecisive',
-    title: 'Second-Guessing / Indecisive',
+    title: 'Second Guessing and Indecisive',
     subtitle: 'When choices paralyze you',
     description: 'Too many options or fear of making the wrong choice keeps you stuck. These tools help you move forward with confidence.',
     games: [
@@ -120,7 +120,7 @@ export const STUCK_TOPICS: StuckTopicConfig[] = [
   },
   {
     key: 'mentally-checked-out-distracted',
-    title: 'Mentally Checked Out / Distracted',
+    title: 'Mentally Checked Out and Distracted',
     subtitle: 'When focus feels impossible',
     description: 'Your mind is everywhere except the task at hand. These tools help you create the right conditions for concentration.',
     games: [

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
+import Link from 'next/link';
 import { ENERGY_CONFIG } from '@/lib/energyConfig';
 import EnergyIntro from '@/components/EnergyIntro';
 import MiniGameCard from '@/components/MiniGameCard';
@@ -36,6 +37,13 @@ export default function EnergyStatePage() {
     return (
       <div className="flex min-h-screen items-start justify-center bg-zinc-50 font-sans dark:bg-black">
         <main className="flex min-h-screen w-full max-w-4xl flex-col px-4 py-16">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-amber-600 dark:hover:text-amber-400 mb-6 transition-colors"
+          >
+            <span>←</span>
+            <span>Back Home</span>
+          </Link>
           <EnergyIntro energy={energy} />
           <StuckTopics />
         </main>
@@ -47,6 +55,13 @@ export default function EnergyStatePage() {
   return (
     <div className="flex min-h-screen items-start justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-4xl flex-col px-4 py-16">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-amber-600 dark:hover:text-amber-400 mb-6 transition-colors"
+        >
+          <span>←</span>
+          <span>Back Home</span>
+        </Link>
         <EnergyIntro energy={energy} />
         
         <div className="mb-6">
