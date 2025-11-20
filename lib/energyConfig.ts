@@ -22,7 +22,7 @@ export const ENERGY_CONFIG: EnergyConfig[] = [
     label: 'Stuck',
     color: 'bg-amber-100 dark:bg-amber-900/30 border-amber-300 dark:border-amber-700',
     icon: '🧱',
-    tagline: 'When you feel blocked or paralyzed',
+    tagline: 'When you feel blocked or paralysed',
     description: 'You know what needs to happen, but something is holding you back. The path forward feels unclear or impossible.',
     miniGames: [
       {

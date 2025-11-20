@@ -6,6 +6,7 @@ import { ENERGY_CONFIG } from '@/lib/energyConfig';
 import EnergyIntro from '@/components/EnergyIntro';
 import MiniGameCard from '@/components/MiniGameCard';
 import BreakItDownGame from '@/components/games/BreakItDownGame';
+import StuckTopics from '@/components/stuck/StuckTopics';
 
 export default function EnergyStatePage() {
   const params = useParams();
@@ -30,6 +31,19 @@ export default function EnergyStatePage() {
     );
   }
 
+  // Special layout for "stuck" state
+  if (state === 'stuck') {
+    return (
+      <div className="flex min-h-screen items-start justify-center bg-zinc-50 font-sans dark:bg-black">
+        <main className="flex min-h-screen w-full max-w-4xl flex-col px-4 py-16">
+          <EnergyIntro energy={energy} />
+          <StuckTopics />
+        </main>
+      </div>
+    );
+  }
+
+  // Original layout for all other energy states
   return (
     <div className="flex min-h-screen items-start justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-4xl flex-col px-4 py-16">
