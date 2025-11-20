@@ -35,7 +35,6 @@ This project is built with:
 - **TypeScript**  
 - **React (Client Components)**  
 - **Tailwind CSS**  
-- **Cursor AI‑assisted development**  
 
 ## Running the App Locally  
 ```bash
