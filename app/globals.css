@@ -95,8 +95,11 @@ body {
   animation-delay: 0.4s;
 }
 
-@media (pointer: fine) {
-  html, body, * {
-    cursor: auto !important;
-  }
+/* Custom cursor images */
+html, body {
+  cursor: url('/cursors/cursor.png') 16 16, auto;
+}
+
+a, button, [role="button"], .clickable {
+  cursor: url('/cursors/pointer.png') 16 16, pointer;
 }
