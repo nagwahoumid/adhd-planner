@@ -5,13 +5,21 @@ export default function Home() {
     <div className="min-h-screen flex items-center justify-center bg-black text-zinc-50">
       <main className="w-full max-w-3xl px-4 text-center space-y-10">
         <p className="text-xs tracking-[0.3em] uppercase text-amber-400">
-          ADHD friendly planner
+          ADHD Based planner
         </p>
         <h1 className="text-3xl md:text-5xl font-bold leading-tight landing-fade-in">
           YOU ARE NOT A BURDEN FOR STRUGGLING
         </h1>
         <p className="text-lg md:text-xl text-zinc-300 landing-fade-in-delayed">
-          Doing 10% of something is still better than 0%.
+          Doing 10% of something is still better than 0% of nothing
+        </p>
+        <p className="text-sm text-zinc-400 landing-fade-in-delayed-2">
+          you're safe here
+          <span className="landing-dots">
+            <span className="dot dot-1" />
+            <span className="dot dot-2" />
+            <span className="dot dot-3" />
+          </span>
         </p>
         <div className="landing-fade-in-delayed-2">
           <Link
