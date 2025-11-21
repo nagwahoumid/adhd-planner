@@ -53,13 +53,26 @@ interface GameCardProps {
 }
 
 function GameCard({ game, topicKey }: GameCardProps) {
-  // Music Challenge is only available for "Can't Kick Things Off"
+  // Music Challenge and Break It Down are only available for "Can't Kick Things Off"
   const isMusicChallenge = game.key === 'music-challenge' && topicKey === 'cant-kick-things-off';
+  const isBreakItDown = game.key === 'break-it-down' && topicKey === 'cant-kick-things-off';
   
   if (isMusicChallenge) {
     return (
       <Link
         href="/energy/stuck/cant-kick-things-off/tools/music"
+        className="block w-full text-left p-6 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 hover:shadow-md hover:border-amber-400 dark:hover:border-amber-600 transition-all"
+      >
+        <h3 className="text-xl font-semibold mb-2 text-foreground">{game.title}</h3>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{game.description}</p>
+      </Link>
+    );
+  }
+
+  if (isBreakItDown) {
+    return (
+      <Link
+        href="/energy/stuck/cant-kick-things-off/tools/break-it-down"
         className="block w-full text-left p-6 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 hover:shadow-md hover:border-amber-400 dark:hover:border-amber-600 transition-all"
       >
         <h3 className="text-xl font-semibold mb-2 text-foreground">{game.title}</h3>
