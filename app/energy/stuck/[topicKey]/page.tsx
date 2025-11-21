@@ -53,26 +53,22 @@ interface GameCardProps {
 }
 
 function GameCard({ game, topicKey }: GameCardProps) {
-  // Music Challenge and Break It Down are only available for "Can't Kick Things Off"
-  const isMusicChallenge = game.key === 'music-challenge' && topicKey === 'cant-kick-things-off';
-  const isBreakItDown = game.key === 'break-it-down' && topicKey === 'cant-kick-things-off';
-  
-  if (isMusicChallenge) {
-    return (
-      <Link
-        href="/energy/stuck/cant-kick-things-off/tools/music"
-        className="block w-full text-left p-6 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 hover:shadow-md hover:border-amber-400 dark:hover:border-amber-600 transition-all"
-      >
-        <h3 className="text-xl font-semibold mb-2 text-foreground">{game.title}</h3>
-        <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{game.description}</p>
-      </Link>
-    );
-  }
+  // Map game keys to their route paths for "Can't Kick Things Off" topic
+  const toolRoutes: Record<string, string> = {
+    'music-challenge': '/energy/stuck/cant-kick-things-off/tools/music',
+    'break-it-down': '/energy/stuck/cant-kick-things-off/tools/break-it-down',
+    'start-anywhere': '/energy/stuck/cant-kick-things-off/tools/start-anywhere',
+    'the-5-second-rule': '/energy/stuck/cant-kick-things-off/tools/5-second-rule',
+    'procrastination-hit-list': '/energy/stuck/cant-kick-things-off/tools/procrastination',
+  };
 
-  if (isBreakItDown) {
+  // Check if this game has a route for this topic
+  const hasRoute = topicKey === 'cant-kick-things-off' && toolRoutes[game.key];
+
+  if (hasRoute) {
     return (
       <Link
-        href="/energy/stuck/cant-kick-things-off/tools/break-it-down"
+        href={toolRoutes[game.key]}
         className="block w-full text-left p-6 rounded-lg border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 hover:shadow-md hover:border-amber-400 dark:hover:border-amber-600 transition-all"
       >
         <h3 className="text-xl font-semibold mb-2 text-foreground">{game.title}</h3>
