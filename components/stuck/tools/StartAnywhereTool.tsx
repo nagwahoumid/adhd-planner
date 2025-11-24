@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 const DEFAULT_OPTIONS = [
   "Open the thing you'll be working on (tab, file, book).",
@@ -121,6 +122,21 @@ export default function StartAnywhereTool() {
           >
             Add
           </button>
+        </div>
+      </div>
+
+      {/* Spinning wheel */}
+      <div className="flex justify-center mb-6">
+        <div
+          className={`w-56 h-56 relative ${isSpinning ? 'animate-spin' : ''}`}
+          style={isSpinning ? { animationDuration: '1.5s' } : {}}
+        >
+          <Image
+            src="/wheel/spinningwheel.png"
+            alt="Start Anywhere wheel"
+            fill
+            className="object-contain drop-shadow-lg"
+          />
         </div>
       </div>
 
