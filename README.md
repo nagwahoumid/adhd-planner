@@ -46,7 +46,7 @@ Open http://localhost:3000 in your browser.
 ## Project Vision  
 The goal is to expand this into a full digital tool inspired by the Anti‑Planner’s emotional and energy‑based strategies, something supportive, realistic, and actually neurodivergent‑friendly.
 
-This planner should *meet you where you are*, not punish you for where you’re not.
+This planner should meet you where you are, not punish you for where you’re not.
 
 ## Credits  
 Huge inspiration from **Dani Donovan** and The Anti‑Planner: How to Get Sh*t Done When You Don’t Feel Like It.
